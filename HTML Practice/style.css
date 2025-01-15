@@ -1,0 +1,12 @@
+div.dotted{
+
+    width: 200px;
+    border: 3px groove black;
+    padding: auto;
+    margin: 10px;
+    display: flex;
+    transform: translate(50%,50%);
+
+
+
+}

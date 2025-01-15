@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HTML Basics</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <table border="20", bordercolor="grey" cellspacing="4" cellpadding="4" style="background-image: url(https://media.istockphoto.com/id/514047994/photo/dark-wall.jpg?s=612x612&w=0&k=20&c=_snTrKiDxMuwhMdtCoH40Ue-1ufeJC_K0mxuuyDCP3U=); color: whitesmoke; text-align: center; ">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td colspan="2">Marks</td>
+                <td>Total Marks</td>
+            </tr>
+        </thead>
+        <tbody >
+        <tr>
+            <td rowspan="2">Rehman</td>
+            <td>Sub 1</td>
+            <td>95</td>
+            <td rowspan="2">195</td>
+        </tr>
+        <tr>
+
+            <td>Sub 2</td>
+            <td>100</td>
+
+        </tr>
+        <tr>
+            <td rowspan="2">Asif</td>
+            <td>Sub 1</td>
+            <td>95</td>
+            <td rowspan="2">192</td>
+        </tr>
+        <tr>
+
+            <td>Sub 2</td>
+            <td>98</td>
+
+        </tr>
+    </tbody>
+    </table>
+
+    <div class="dotted">
+        This is Dotted
+    </div>
 </body>
+
 </html>
