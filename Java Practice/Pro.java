@@ -22,7 +22,7 @@ public static void main(String[] args) {
     int d=sc.nextInt();
     int result= ((a+b-c*d / a) % b);
     System.out.printf("(a + b - c * d / a) %%b = %d", result);
-
+    
     sc.close();
 }
 }
