@@ -1,4 +1,4 @@
-div.dotted{
+/* div.dotted{
 
     width: 200px;
     border: 3px groove black;
@@ -9,4 +9,205 @@ div.dotted{
 
 
 
+}
+.dashed span{
+    border: 3px dashed black;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+
+    transform: translate(50%,50%);
+
+} */
+/* 
+img{
+    width: 500px;
+    height: 500px;
+    margin: 10px;
+    display: flex;
+    transform: translate(50%,50%);
+    }
+
+.o1 ,.o2,.o3 ,.o4,.o5 ,.o6,.o7 ,.o8,.o9 ,.o10{
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    /* transform: translate(50% ,50%); 
+    text-align: center;
+    align-items: center;
+}
+
+.o1{
+    opacity: 0.1;
+}
+.o2{
+    opacity: 0.2;
+}
+.o3{
+    opacity: 0.3;
+}
+.o4{
+    opacity: 0.4;
+}
+.o5{
+    opacity: 0.5;
+}
+.o6{
+    opacity: 0.6;
+}
+.o7{
+    opacity: 0.7;
+}
+.o8{
+    opacity: 0.8;
+}
+.o9{
+    opacity: 0.9;
+}
+.o10{
+    opacity: 1;
+}
+
+body{
+    background-color: lightblue;
+    background-image: url(https://easydrawingguides.com/wp-content/uploads/2017/05/how-to-draw-naruto-featured-image-1200.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+a:hover{
+    color: green;
+}
+a:visited{
+    color: red;
+}
+a:active{
+    color: black;
+} */
+
+.form{
+    width: 80vw;
+    height: 60vh;
+    border: 3px solid black;
+    padding: 20px 30px;
+    margin: 10px;
+    display: flex;
+    transform: translate(10%,10%);
+    /* justify-content: center; */
+    /* text-align: center; */
+    align-items: center;
+    border-radius: 50px;
+    background-color:rgb(236, 199, 147);
+    gap: 50px;
+}
+form{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+       
+}
+.form input{
+    width: 60%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: inline;
+}
+
+input[type="radio"]{
+    width: 10%;
+    height: 20px;
+}
+.form ::placeholder{
+    font-size: 5x;
+    font-weight: bold;
+    color: black;
+}
+.form :-ms-input-placeholder{
+    font-size: 5x;
+    font-weight: bold;
+    color: black;
+}
+input:valid {
+   
+    background-color: #f0fff0;
+    font-weight: bold;
+  }
+.form label{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-right: 5px;
+}
+.form button{
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: center;
+}
+button:hover{
+    background-color: rgb(255, 102, 0);
+}
+h3{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    display: inline;
+}
+.gender{
+    display: flex;
+    align-items: center;
+}   
+div img{
+    margin: 10px;
+    margin-left: 40%;
+    display: inline;
+    justify-content: right;
+    border: 5px;
+    border-radius: 50px;
+    padding: 0;
+}
+
+
+header{
+    background-color: rgb(12, 119, 12);
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    font-family: Arial, sans-serif;
 }
