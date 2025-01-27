@@ -102,7 +102,7 @@ a:active{
     color: black;
 } */
 
-.form{
+/* .form{
     width: 80vw;
     height: 60vh;
     border: 3px solid black;
@@ -110,13 +110,13 @@ a:active{
     margin: 10px;
     display: flex;
     transform: translate(10%,10%);
-    /* justify-content: center; */
-    /* text-align: center; */
+ justify-content: center; 
+     text-align: center; 
     align-items: center;
     border-radius: 50px;
     background-color:rgb(236, 199, 147);
     gap: 50px;
-}
+} 
 form{
     justify-content: center;
     align-items: center;
@@ -195,7 +195,7 @@ div img{
     padding: 0;
 }
 
-
+/* 
 header{
     background-color: rgb(12, 119, 12);
     color: white;
@@ -210,4 +210,25 @@ header{
     height: 10vh;
     width: 100vw;
     font-family: Arial, sans-serif;
+} */
+
+
+.grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    gap: 10px;
+    grid-template-areas: "header header"
+                         "slider main"
+                         "footer footer";
+    grid-template-columns: auto 1fr auto;              
 }
