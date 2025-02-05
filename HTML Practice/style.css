@@ -230,5 +230,6 @@ header{
     grid-template-areas: "header header"
                          "slider main"
                          "footer footer";
-    grid-template-columns: auto 1fr auto;              
+    grid-template-columns: auto 1fr auto;      
+            
 }
