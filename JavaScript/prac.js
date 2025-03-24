@@ -1,8 +1,8 @@
-const car = new Object();
-car.brand = "Toyota";
-car.model = "Corolla";
-car.year = 2022;
+function isValidInpu(str){
+    
+}
 
-console.log(car.brand);
-console.log(car.model);
-console.log(car.year);
+console.log(isValidInput("Hello"));
+console.log(isValidInput("    "));
+console.log(isValidInput("Code"));
+console.log(isValidInput(""));
