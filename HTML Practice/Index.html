@@ -1,112 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Basics</title>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-     <link rel="stylesheet" href="style.css">
+    <title>Thumbnail and Lightbox</title>
 </head>
-
 <body>
-    <!-- <table border="20", bordercolor="grey" cellspacing="4" cellpadding="4" style="background-image: url(https://media.istockphoto.com/id/514047994/photo/dark-wall.jpg?s=612x612&w=0&k=20&c=_snTrKiDxMuwhMdtCoH40Ue-1ufeJC_K0mxuuyDCP3U=); color: whitesmoke; text-align: center; ">
-        <thead>
-            <tr>
-                <td>Name</td>
-                <td colspan="2">Marks</td>
-                <td>Total Marks</td>
-            </tr>
-        </thead>
-        <tbody >
-        <tr>
-            <td rowspan="2">Rehman</td>
-            <td>Sub 1</td>
-            <td>95</td>
-            <td rowspan="2">195</td>
-        </tr>
-        <tr>
-
-            <td>Sub 2</td>
-            <td>100</td>
-
-        </tr>
-        <tr>
-            <td rowspan="2">Asif</td>
-            <td>Sub 1</td>
-            <td>95</td>
-            <td rowspan="2">192</td>
-        </tr>
-        <tr>
-
-            <td>Sub 2</td>
-            <td>98</td>
-
-        </tr>
-    </tbody>
-    </table>
-
-    <div class="dotted">
-        This is Dotted
+    <h2>Interactive Image Gallery</h2>
+    <div class="preview" id="preview">
+        <p>Click an image to preview</p>
+        <img src="" alt="Preview will appear here" id="largeImage">
+        
     </div>
+    <script>
+        const imageSources = [
+            "cat1.jpg",
+            "t3.jpg",
+            "t1.jpg",
+            "t2.jpg",
+            "t4.jpg"
+        ];
 
-    <div class="dashed">
-        <span>
-            This is a Heading
-        </span>
-    </div>
+        const gallery = document.getElement("galllary");
+        const largeImage = document.getElementById("largeImage");
 
-    <img  src="https://easydrawingguides.com/wp-content/uploads/2017/05/how-to-draw-naruto-featured-image-1200.png" alt=""> -->
-<!-- 
+        function createGallary(){
 
-    <div class="o1"><h1><a href="blank" target="_blank">I am a Naruto Uzmaki</a></h1></div>
-    <div class="o2"><h1><a href="blank" target="_blank">I am a Naruto Uzmaki</a></h1></div>
-    <div class="o3"><h1><a href="blank" target="_blank">I am a Naruto Uzmaki</a></h1></div>
-    <div class="o4"><h1><a href="blank" target="_blank">I am a Naruto Uzmaki</a></h1></div>
-    <div class="o5"><h1><a href="blank" target="_blank">I am a Naruto Uzmaki</a></h1></div>
-    <div class="o6"><h1><a href="blank" target="_blank">I am a Naruto Uzmaki</a></h1></div>
-    <div class="o7"><h1><a href="blank" target="_blank">I am a Naruto Uzmaki</a></h1></div>
-    <div class="o8"><h1><a href="blank" target="_blank">I am a Naruto Uzmaki</a></h1></div>
-    <div class="o9"><h1><a href="blank" target="_blank">I am a Naruto Uzmaki</a></h1></div>
-
-
-    <div class="o10"><h1><a href="blank" target="_blank">I am a Naruto Uzmaki</a></h1></div> -->
-
-    <!-- <header>
-        <h1>Registration Form</h1>
-    </header>
-    <div class="form">
-        <form action="/server">
-            <label for="name" >Name:</label>
-            <input type="text" name="name" id="name" placeholder="Enter Your Name">
-            <br>
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" placeholder="Enter Your Email">
-            <br>
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" placeholder="Enter Your Password">
-            <br>
-            <div class="gender">
-                <label for="gender" >Gender:</label>
-            <input type="radio" name="gender" id="male" ><h3>Male</h3>
-            <input type="radio" name="gender" id="female" ><h3>Female</h3>
-            </div>
-            <br>
-            <button type="submit">Submit</button>
-            <button type="reset">Reset</button>
-            
-            
-        </form>
-        <img src="https://easydrawingguides.com/wp-content/uploads/2017/05/how-to-draw-naruto-featured-image-1200.png" alt="" height="90%" width="30%" style="margin-left: 0%;">
-    </div> -->
-
-    <div class="grid">
-        <div class="header">1</div>
-        <div class="slider">2</div>
-        <div class="main">3</div>
-        <div class="footer">4</div>
-
-    </div>
+        }
+    </script>
 </body>
-
 </html>
