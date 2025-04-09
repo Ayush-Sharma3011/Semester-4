@@ -1,32 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thumbnail and Lightbox</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thumbnail Preview & Lightbox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: rgb(226, 143, 107);
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100px;
+      height: 100px;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    .gallery img:hover {
+      border: 2px solid blue;
+    }
+
+    .lightbox {
+      display: none; /* Hidden by default */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+      justify-content: center;
+      align-items: center;
+      z-index: 1000; /* Ensure it's on top */
+    }
+
+    .lightbox img {
+      max-width: 80%;
+      max-height: 80%;
+      border: 2px solid white;
+    }
+  </style>
 </head>
 <body>
-    <h2>Interactive Image Gallery</h2>
-    <div class="preview" id="preview">
-        <p>Click an image to preview</p>
-        <img src="" alt="Preview will appear here" id="largeImage">
-        
-    </div>
-    <script>
-        const imageSources = [
-            "cat1.jpg",
-            "t3.jpg",
-            "t1.jpg",
-            "t2.jpg",
-            "t4.jpg"
-        ];
+  <h2>Thumbnail Preview & Lightbox</h2>
+  <div class="gallery" id="gallery"></div>
 
-        const gallery = document.getElement("galllary");
-        const largeImage = document.getElementById("largeImage");
+  <div class="lightbox" id="lightbox">
+    <img id="lightboxImage" src="" alt="Large Preview">
+  </div>
 
-        function createGallary(){
+  <script>
+    const imageSources = [
+      "images (2).jpeg",
+      "images (4).jpeg",
+      "images (3).jpeg",
+      "images (5).jpeg",
+    ];
 
-        }
-    </script>
+    const gallery = document.getElementById("gallery");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+
+    function createGallery() {
+      imageSources.forEach(src => {
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = "Gallery Image";
+        img.addEventListener("click", function() {
+          lightboxImage.src = src;
+          lightbox.style.display = "flex";
+        });
+        gallery.appendChild(img);
+      });
+    }
+
+    createGallery();
+
+    // Close the lightbox when clicking outside the image
+    lightbox.addEventListener("click", function(event) {
+      if (event.target === lightbox) {
+        lightbox.style.display = "none";
+      }
+    });
+  </script>
 </body>
 </html>
