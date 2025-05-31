@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <input type="text" id="item" placeholder="Enter item">
+  <button onclick="addItem()">Add</button>
+  <select id="dropdown" onchange="displaySelection()"></select>
+  <div id="output"></div>
+
+  <script>
+    function addItem() {
+      const item = document.getElementById('item').value;
+      const option = new Option(item, item);
+      document.getElementById('dropdown').appendChild(option);
+    }
+
+    function displaySelection() {
+      const selected = document.getElementById('dropdown').value;
+      document.getElementById('output').innerText = `You selected: ${selected}`;
+    }
+  </script>
+</body>
+</html>

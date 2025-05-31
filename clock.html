@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Clock</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #clock {
+      font-size: 48px;
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+      margin-top: 20%;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="clock">00:00:00</div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      let hours = now.getHours().toString().padStart(2, '0');
+      let minutes = now.getMinutes().toString().padStart(2, '0');
+      let seconds = now.getSeconds().toString().padStart(2, '0');
+      let time = `${hours}:${minutes}:${seconds}`;
+      $('#clock').text(time);
+    }
+
+    $(document).ready(function() {
+      updateClock(); // Initial call
+      setInterval(updateClock, 1000); // Update every second
+    });
+  </script>
+
+</body>
+</html>

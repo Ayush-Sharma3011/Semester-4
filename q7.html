@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div id="msg">Hello, World!</div>
+  <button id="btn1">Click Me</button>
+  <div id="funFact"></div>
+
+  <script>
+    $('#btn1').click(function() {
+      $('#msg').text($('#msg').text() === "Hello, World!" ? "See you soon!" : "Hello, World!");
+      $('#funFact').css('background', getRandomColor());
+      $('#funFact').text("Fun fact: Space is completely silent.");
+    });
+
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) color += letters[Math.floor(Math.random() * 16)];
+      return color;
+    }
+  </script>
+</body>
+</html>

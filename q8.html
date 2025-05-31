@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <img id="slider" src="img/img1.jpg" width="300">
+  <br>
+  <button onclick="prev()">Prev</button>
+  <button onclick="next()">Next</button>
+
+  <script>
+    let index = 1;
+
+    function showImage() {
+      $('#slider').attr('src', `img/img${index}.jpg`);
+      if (index === 10) alert('Last image reached!');
+    }
+    
+
+    function next() {
+      if (index < 10) index++;
+      showImage();
+    }
+
+    function prev() {
+      if (index > 1) index--;
+      showImage();
+    }
+
+    setInterval(() => {
+      if (index < 10) index++;
+      showImage();
+    }, 3000);
+  </script>
+</body>
+</html>
+
+<!-- Implement image adding and image in your own webpage.when u aplly onmouseover on the image, it will display the prime number. 
+ Also include one button bellow  your image,when you hover the mouse  over the button, It'll display your freinds name three times in a seperate tag.-->

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Character Counter</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <textarea id="text" maxlength="100"></textarea>
+  <div id="count">100 characters left</div>
+
+  <script>
+    $('#text').on('input', function() {
+      const max = 100;
+      const len = $(this).val().length;
+      $('#count').text(`${max - len} characters left`);
+
+      if (len >= max) {
+        alert("Character limit reached!");
+        $('#count').css('color', 'red');
+      } else {
+        $('#count').css('color', 'black');
+      }
+    });
+  </script>
+</body>
+</html>

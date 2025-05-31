@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Paragraph Generator</title>
+</head>
+<body>
+  <input type="number" id="paraCount" placeholder="Enter number of paragraphs">
+  <button onclick="generateParagraphs()">Generate</button>
+  <div id="output"></div>
+
+  <script>
+    function generateParagraphs() {
+      const count = document.getElementById('paraCount').value;
+      const output = document.getElementById('output');
+      output.innerHTML = '';
+      for (let i = 0; i < count; i++) {
+        const para = document.createElement('p');
+        para.textContent = 'This is paragraph ' + (i + 1);
+        para.onclick = () => para.style.fontSize = '24px';
+        output.appendChild(para);
+      }
+    }
+  </script>
+</body>
+</html>

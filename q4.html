@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FAQ</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div>
+    <h3 class="question">Q1: What is HTML?</h3>
+    <div class="answer" style="display:none;">A: HTML stands for HyperText Markup Language.</div>
+    
+    <h3 class="question">Q2: What is CSS?</h3>
+    <div class="answer" style="display:none;">A: CSS stands for Cascading Style Sheets.</div>
+  </div>
+
+  <script>
+    $('.question').click(function () {
+      $('.answer').slideUp();
+      $(this).next('.answer').slideToggle();
+      alert('Question opened');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="text-center p-10">
+  <div id="clock" class="text-2xl"></div>
+  <p id="quote" class="mt-4 italic">Hover to see a quote</p>
+  <button id="langBtn" class="bg-blue-500 text-white px-4 py-2 mt-4 rounded">Hover me</button>
+  <div id="langOutput" class="mt-2"></div>
+
+  <script>
+    setInterval(() => {
+      const now = new Date();
+      document.getElementById('clock').innerText = now.toLocaleTimeString();
+    }, 1000);
+
+    document.getElementById('clock').onmouseover = () => {
+      document.getElementById('quote').innerText = "Shoot for the moon. Even if you miss, you'll land among the stars.";
+    };
+
+    document.getElementById('langBtn').onmouseover = () => {
+      const lang = "JavaScript";
+      document.getElementById('langOutput').innerHTML = `<p>${lang}</p><p>${lang}</p><p>${lang}</p><p>${lang}</p>`;
+    };
+  </script>
+</body>
+</html>

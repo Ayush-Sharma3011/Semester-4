@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Gallery</title>
+</head>
+<body>
+  <input type="number" id="imgCount" placeholder="Number of images">
+  <button onclick="generateGallery()">Generate Gallery</button>
+  <div id="gallery"></div>
+
+  <script>
+    function generateGallery() {
+      const count = document.getElementById('imgCount').value;
+      const gallery = document.getElementById('gallery');
+      gallery.innerHTML = '';
+      for (let i = 1; i <= count && i <= 10; i++) {
+        const img = document.createElement('img');
+        img.src = `img/img${i}.jpg`;
+        img.style.width = '100px';
+        img.style.margin = '5px';
+        img.onclick = () => img.style.width = '300px';
+        gallery.appendChild(img);
+      }
+    }
+  </script>
+</body>
+</html>

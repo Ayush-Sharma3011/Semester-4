@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <input type="number" id="count" placeholder="Number of items">
+  <button onclick="generateList()">Generate List</button>
+  <ul id="list"></ul>
+
+  <script>
+    function generateList() {
+      const count = document.getElementById('count').value;
+      const ul = document.getElementById('list');
+      ul.innerHTML = '';
+      for (let i = 1; i <= count; i++) {
+        const li = document.createElement('li');
+        li.textContent = 'Item ' + i;
+        li.onmouseover = () => li.style.backgroundColor = 'yellow';
+        ul.appendChild(li);
+      }
+    }
+  </script>
+</body>
+</html>

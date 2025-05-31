@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-10">
+  <div class="max-w-sm rounded overflow-hidden shadow-lg" onmouseover="showFact()">
+    <img class="w-full" src="img/img1.jpg" alt="Profile">
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">John Doe</div>
+      <p class="text-gray-700 text-base">Frontend Developer and Space Lover.</p>
+      <p id="fact" class="mt-2 text-sm text-indigo-500"></p>
+      <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mt-2 rounded" 
+              onmouseover="showFavLang()">Reveal Fav Language</button>
+      <div id="favLang" class="mt-2 text-sm"></div>
+    </div>
+  </div>
+
+  <script>
+    function showFact() {
+      document.getElementById('fact').innerText = "Fun fact: Venus is hotter than Mercury despite being farther from the sun.";
+    }
+
+    function showFavLang() {
+      const lang = "JavaScript";
+      document.getElementById('favLang').innerHTML = `${lang} <br> ${lang} <br> ${lang} <br> ${lang}`;
+    }
+  </script>
+</body>
+</html>
